@@ -103,10 +103,15 @@
               "@angular/material/prebuilt-themes/deeppurple-amber.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "karmaConfig": "karma.conf.js",
+            "codeCoverage": true
           }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }
