@@ -114,4 +114,54 @@ fdescribe('SeletorPassageiroComponent', () => {
   //   expect(component.onChange).toHaveBeenCalledTimes(2);
   //   expect(component.onTouch).toHaveBeenCalledTimes(2);
   // });
+
+  it('should increment 1 when call #incrementar()', () => {
+    component.incrementar();
+    const valorEsperadoDoValue = 1;
+
+    expect(component.value).toBe(valorEsperadoDoValue);
+    expect(component.onChange).toHaveBeenCalledWith(valorEsperadoDoValue);
+
+    expect(component.onChange).toHaveBeenCalledTimes(1);
+    expect(component.onTouch).toHaveBeenCalledTimes(1);
+  });
+
+  it('should increment 2 when call #incrementar() 2 times', () => {
+    component.incrementar();
+    component.incrementar();
+
+    const valorEsperadoDoValue = 2;
+
+    expect(component.value).toBe(valorEsperadoDoValue);
+    expect(component.onChange).toHaveBeenCalledWith(valorEsperadoDoValue);
+
+    expect(component.onChange).toHaveBeenCalledTimes(2);
+    expect(component.onTouch).toHaveBeenCalledTimes(2);
+  });
+
+  it('should decrement 1 when call #decrementar()', () => {
+    component.incrementar();
+    component.decrementar();
+
+    const valorEsperadoDoValue = 0;
+
+    expect(component.value).toBe(valorEsperadoDoValue);
+    expect(component.onChange).toHaveBeenCalledWith(valorEsperadoDoValue);
+
+    expect(component.onChange).toHaveBeenCalledTimes(2);
+    expect(component.onTouch).toHaveBeenCalledTimes(2);
+  });
+
+  // xit('should increment 2 when call #incrementar 2 times', () => {
+  //   component.incrementar();
+  //   component.incrementar();
+
+  //   const valorEsperadoDoValue = 2;
+
+  //   expect(component.value).toBe(valorEsperadoDoValue);
+  //   expect(component.onChange).toHaveBeenCalledWith(valorEsperadoDoValue);
+
+  //   expect(component.onChange).toHaveBeenCalledTimes(2);
+  //   expect(component.onTouch).toHaveBeenCalledTimes(2);
+  // });
 });
