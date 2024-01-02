@@ -41,7 +41,7 @@ xdescribe('SeletorPassageiroComponent with HostComponent', () => {
   });
 });
 
-fdescribe('SeletorPassageiroComponent', () => {
+describe('SeletorPassageiroComponent', () => {
   let component: SeletorPassageiroComponent;
   let fixture: ComponentFixture<SeletorPassageiroComponent>;
 

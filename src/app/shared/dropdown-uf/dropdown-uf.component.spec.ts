@@ -33,7 +33,7 @@ class HostComponent implements AfterViewInit{
   }
 }
 
-fdescribe('DropdownUfComponent', () => {
+describe('DropdownUfComponent', () => {
   let component: HostComponent;
   let fixture: ComponentFixture<HostComponent>;
 
